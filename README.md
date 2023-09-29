@@ -1,6 +1,6 @@
 # Leveraging Neuron Activation Patterns to Explain and Improve Deep Learning Classifiers
 
-This code explains ways of analyzing the neuron activation pattern proposed in PID_4708.
+This code explains ways of analyzing the neuron activation pattern proposed in PID_3804.
 
 
 ## Requirements
