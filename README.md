@@ -1,12 +1,10 @@
-# Leveraging Neuron Activation Patterns to Explain and Improve Deep Learning Classifiers
-
-This code explains ways of analyzing the neuron activation pattern proposed in PID_3804.
+# Leveraging Neuron Activation Patterns to Explain Deep Learning Classifiers
 
 
 ## Requirements
 Python 3.7 or later\
 
-see `requirement.txt` for exact authors environment.
+see `requirement.txt` for the exact author environment.
 
 Before starting to train the model save the training data in `Images/train` and the testing data in `Images/test`.
 
