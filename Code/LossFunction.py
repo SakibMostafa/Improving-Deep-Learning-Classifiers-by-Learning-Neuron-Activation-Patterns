@@ -1,15 +1,16 @@
 import numpy as np
 import tensorflow as tf
 tf.config.run_functions_eagerly(True)
-from keras.applications.inception_v3 import preprocess_input
-from keras.models import Model, load_model
+from keras.applications.resnet import preprocess_input
+from keras.models import Model
 from keras.preprocessing.image import ImageDataGenerator
-from keras.applications import InceptionV3
+from keras.applications import ResNet50
 from tensorflow import keras
 from keras.layers import Dense
 import time
 from keras import Input
 from keras import backend as K
+from tqdm import tqdm
 import os
 import shutil
 BLUE = "\033[94m"
@@ -24,11 +25,11 @@ train_data_dir = '../Images/train'
 validation_data_dir = '../Images/test'
 output_directory = '../Feature_Image'
 
-epochs = 20
-num_images_to_save = 20
+epochs = 40
+num_images_to_save = 50
 batch_size = 64
-num_class = 100
-neuron_layer1 = 8192
+num_class = 10
+neuron_layer1 = 2048
 training_ACC = np.zeros((epochs))
 validation_ACC = np.zeros((epochs))
 
@@ -38,7 +39,7 @@ if K.image_data_format() == 'channels_first':
 else:
     input_shape = (img_width, img_height, 3)
 # Specify Model
-RN_model = InceptionV3(include_top=False, weights=None, pooling='avg', input_tensor=Input(shape = input_shape))
+RN_model = ResNet50(include_top=False, weights=None, pooling='avg', input_tensor=Input(shape = input_shape))
 X = RN_model.output
 fc = Dense(num_class, activation='softmax', name='Output')(X)
 model = Model(inputs=RN_model.inputs, outputs = fc)
