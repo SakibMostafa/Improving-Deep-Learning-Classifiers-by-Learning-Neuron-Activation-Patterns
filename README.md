@@ -1,4 +1,4 @@
-# Leveraging Neuron Activation Patterns to Explain Deep Learning Classifiers
+# Leveraging Neuron Activation Patterns to Improve Deep Learning Classifiers
 
 
 ## Requirements
@@ -36,6 +36,14 @@ Auxiliary_Model.py
 ```
 
 It will save the accuracy of the auxiliary model in `Results/Training_Testing_Custom_CNN_Accuracy.csv`
+
+## Training Loss Function
+To train a deep learning classifier using the proposed loss function run
+
+```
+LossFunction.py
+```
+
 
 ## Miscellaneous 
 
