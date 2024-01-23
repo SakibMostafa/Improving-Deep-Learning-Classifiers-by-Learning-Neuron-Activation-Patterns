@@ -2,9 +2,9 @@
 
 
 ## Requirements
-Python 3.7 or later\
+Python 3.7 or later
 
-see `requirement.txt` for the exact author environment.
+See `requirement.txt` for the exact author environment.
 
 Before starting to train the model save the training data in `Images/train` and the testing data in `Images/test`.
 
