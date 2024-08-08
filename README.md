@@ -1,4 +1,4 @@
-# Leveraging Neuron Activation Patterns to Improve Deep Learning Classifiers
+# Improving Deep Learning Classifiers by Learning Neuron Activation Patterns
 
 
 ## Requirements
